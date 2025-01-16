@@ -1,4 +1,5 @@
 import {expect, Page} from '@playwright/test';
+
 export async function reportValidate(page: Page): Promise<void> {
 	await page.locator('[data-testid="link-button-Reports"]').click();
 	const dashboardCard = page.locator('.dashboard-card').filter({hasText: 'Web Application Firewall'});
